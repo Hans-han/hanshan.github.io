@@ -20,7 +20,7 @@ function send(response, statusCode, body, contentType = 'text/plain; charset=utf
 }
 
 function renderPreviewPage() {
-  const source = fs.readFileSync(path.join(repoRoot, '_tabs/hongloumeng.md'), 'utf8');
+  const source = fs.readFileSync(path.join(repoRoot, '_tabs/hongloumeng.html'), 'utf8');
   const body = source
     .replace(/^---[\s\S]*?---\s*/, '')
     .replaceAll('{{ site.baseurl }}', '');
