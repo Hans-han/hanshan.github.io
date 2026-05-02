@@ -26,7 +26,7 @@ toc: false
 
   <div id="hlm-viewer" class="hlm-viewer" aria-live="polite">
     <div class="hlm-main">
-      <img id="hlm-main-image" alt="红楼梦漫画" />
+      <div id="hlm-main-image-slot"></div>
       <p id="hlm-caption"></p>
     </div>
 
@@ -241,7 +241,11 @@ toc: false
     const previous = document.getElementById('hlm-prev');
     const next = document.getElementById('hlm-next');
     const viewer = document.getElementById('hlm-viewer');
-    const mainImage = document.getElementById('hlm-main-image');
+    const mainImageSlot = document.getElementById('hlm-main-image-slot');
+    const mainImage = document.createElement('img');
+    mainImage.id = 'hlm-main-image';
+    mainImage.alt = '红楼梦漫画';
+    mainImageSlot.append(mainImage);
     const caption = document.getElementById('hlm-caption');
     const thumbnails = document.getElementById('hlm-thumbnails');
     const imagePrevious = document.getElementById('hlm-image-prev');
