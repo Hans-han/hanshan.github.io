@@ -25,10 +25,10 @@ toc: false
   </nav>
 
   <div id="hlm-viewer" class="hlm-viewer" aria-live="polite">
-    <figure class="hlm-main">
-      <img id="hlm-main-image" alt="">
-      <figcaption id="hlm-caption"></figcaption>
-    </figure>
+    <div class="hlm-main">
+      <img id="hlm-main-image" alt="红楼梦漫画" />
+      <p id="hlm-caption"></p>
+    </div>
 
     <aside class="hlm-strip" aria-label="本回图片">
       <button id="hlm-image-prev" type="button" aria-label="上一张">‹</button>
@@ -122,10 +122,6 @@ toc: false
     align-items: start;
   }
 
-  .hlm-main {
-    margin: 0;
-  }
-
   .hlm-main img {
     display: block;
     width: 100%;
@@ -135,9 +131,9 @@ toc: false
     background: var(--card-bg);
   }
 
-  .hlm-main figcaption {
+  .hlm-main p {
     min-height: 1.8rem;
-    margin-top: 0.55rem;
+    margin: 0.55rem 0 0;
     color: var(--text-muted-color);
     font-size: 0.95rem;
     text-align: center;
